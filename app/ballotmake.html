@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Election Maker</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="container" style="background-color:#EBEBEB">
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a style="font-weight: bolder; color: rgb(247, 131, 6);">MENU</a>
+            <br>
+        <a href="voting.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Ballot Voting</a>
+        <br>
+        <a href="results.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Results</a>
+        <br>
+        <a href="ballotmake.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Create Election Logic</a>
+        <br>
+        <a href="/"><i class="fa fa-cog fa-spin fa-fw"></i> Admin Controls</a>
+    </div>
+
+    <div class="main">
+        <div class="row">
+            <!-- Create Ballot -->
+            <h2 style="color:rgb(0, 110, 253)">Create Ballot:</h2>
+            <div id="msg3"></div>
+            <input type="text" id="cemail" placeholder="Your registered e-mail address" style="width: 400px" />
+            <br>
+            <br>
+            <b style="color:rgb(247, 131, 6)">Select ballot type:</b>
+            <br>
+            <input type="radio" style="width: 25px" name="ballottype" value="0"> <b>Poll</b>
+            <br>
+            <input type="radio" style="width: 25px" name="ballottype" value="2"> <b>First to X Votes</b>
+            <br>
+            <br>
+            <input type="text" id="vtitle" placeholder="Title of your ballot" style="width: 400px" />
+            <br>
+            <br>
+            <b style="color:rgb(0, 110, 253)">Seperate each candidate/choice with a comma:</b>
+            <br>
+            <input type="text" id="choices" placeholder="Candidates/Choices" style="width: 400px" />
+            <br>
+            <br>
+            <input type="text" id="votelimit" placeholder="Total Number of votes allowed" style="width: 400px" />
+            <br>
+            <br>
+            <input type="text" id="votestowin" placeholder="Number of votes to win (if First to X Votes option)" style="width: 400px" />
+            <br>
+            <br>
+            <b style="color:rgb(247, 131, 6)">Select voting restriction:</b>
+            <br>
+            <input type="radio" style="width: 25px" name="whitelist" value="0"> <b>Non-Whitelist</b> (all e-mails with whitelisted domain are allowed to vote)
+            <br>
+            <input type="radio" style="width: 25px" name="whitelist" value="1"> <b>Whitelist</b> (only certain e-mails with whitelisted domain are allowed to vote)
+            <br>
+            <br>
+            <b style="color:rgb(0, 110, 253)">Seperate each e-mail address with a comma: </b>
+            <br>
+            <input type="text" id="whitelisted" placeholder="Whitelisted e-mail addresses (if Whitelist option)" style="width: 400px" />
+            <br>
+            <br>
+            <form>
+                <b style="color:rgb(247, 131, 6)">Select Poll End Date and Time:</b>
+                <br>
+                <input type="date" id="date" style="width: 170px">
+                <input type="time" id="time" style="width: 125px">
+            </form>
+            <br>
+            <a href="#" onclick="ballotSetup()" class="btn btn-primary" style="background-color:rgb(247, 131, 6); margin-bottom: 3em;">Create</a>
+            <br>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://cdn.rawgit.com/jiggzson/b5f489af9ad931e3d186/raw/3a316e5b2fa85b8064dd3870936a6162b4862f1f/scientificToDecimal.js"></script>
+<script src="https://cdn.rawgit.com/abritinthebay/datejs/master/build/production/date.min.js"></script>
+<script src="app.js"></script>
+
+</html>

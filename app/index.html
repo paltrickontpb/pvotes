@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type='text/css'>
+    <title>Registration Page</title>
+</head>
+
+<body class="container text-centered" style="background-color: #EBEBEB">  
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a style="font-weight: bolder; color: rgb(247, 131, 6);">MENU</a>
+            <br>
+        <a href="voting.html"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Ballot Voting</a>
+        <br>
+        <a href="results.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Results</a>
+        <br>
+        <a href="ballotmake.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Create Election Logic</a>
+        <br>
+        <a href="/"><i class="fa fa-cog fa-spin fa-fw"></i> Admin Controls</a>
+    </div>
+    <div class="text-centered main">
+        <div class="row">
+            <h2 style="color:rgb(0, 110, 253)">Register to Vote</h2>
+            <br>
+            <div id="msg2"></div>
+            <input type="text" id="idnum" placeholder="University student/employee ID" style="width: 260px" />
+            <br>
+            <br>
+            <input type="text" id="email" placeholder="Your e-mail address" style="width: 400px" />
+            <br>
+            <br>
+            <input type="checkbox" style="width: 25px" name="permreq" value="1"> <b>Request Ballot Creation Permission</b> <br>(Tick the checkbox to give election creation rights)
+            <br>
+            <br>
+            <a href="#" onclick="registerToVote()" class="btn btn-primary" style="background-color:rgb(247, 131, 6)">Register</a>
+            <br>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://cdn.rawgit.com/jiggzson/b5f489af9ad931e3d186/raw/3a316e5b2fa85b8064dd3870936a6162b4862f1f/scientificToDecimal.js"></script>
+<script src="https://cdn.rawgit.com/abritinthebay/datejs/master/build/production/date.min.js"></script>
+<script src="app.js"></script>
+
+</html>
